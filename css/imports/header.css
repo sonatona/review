@@ -279,11 +279,11 @@ body.stretched #header.full-header .container {
 #primary-menu ul ul a {
 	font-size: 12px;
 	font-weight: 600;
-	height: 42px !important;
-	line-height: 42px !important;
+	height: auto !important;
+	line-height: 22px !important;
 	color: #666 !important;
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
 	border: 0 !important;
 	letter-spacing: 0;
 	font-family: 'Lato', sans-serif;
@@ -393,7 +393,7 @@ body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-cont
 	text-transform: uppercase !important;
 	margin-bottom: 15px;
 	color: #444 !important;
-	padding: 0;
+	padding: 0 !important;
 	height: auto !important;
 	line-height: 1.3 !important;
 }
@@ -416,8 +416,10 @@ body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-cont
 
 #primary-menu ul li .mega-menu-content.style-2 ul a {
 	padding-left: 5px;
-	height: 36px !important;
-	line-height: 36px !important;
+	height: auto !important;
+	padding-top: 7px !important;
+	padding-bottom: 7px !important;
+	line-height: 22px !important;
 }
 
 #primary-menu ul li .mega-menu-content.style-2 ul a:hover { padding-left: 12px; }
@@ -466,7 +468,7 @@ body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-cont
 body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.center > ul,
 body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.center > div {
 	float: none;
-	display: inline-block;
+	display: inline-block !important;
 	width: auto;
 	text-align: left;
 }
@@ -1212,6 +1214,10 @@ body.top-search-open #side-panel-trigger { opacity: 0; }
 	-webkit-backface-visibility: hidden;
 }
 
+#header.static-sticky ~ #page-menu.sticky-page-menu #page-menu-wrap { top: 100px; }
+
+#header.no-sticky ~ #page-menu.sticky-page-menu #page-menu-wrap { top: 0; }
+
 #page-submenu-trigger {
 	top: 0;
 	margin-top: 0;
@@ -1249,12 +1255,16 @@ body.top-search-open #side-panel-trigger { opacity: 0; }
 
 #page-menu nav li a {
 	display: block;
-	height: 44px;
-	line-height: 44px;
-	padding: 0 17px;
+	height: 28px;
+	line-height: 28px;
+	margin: 8px 4px;
+	padding: 0 14px;
 	color: #FFF;
 	font-size: 14px;
+	border-radius: 14px;
 }
+
+#page-menu nav li a .icon-angle-down { margin-left: 5px; }
 
 body:not(.device-touch) #page-menu nav li a {
 	-webkit-transition: all .2s ease-in-out;
@@ -1262,8 +1272,37 @@ body:not(.device-touch) #page-menu nav li a {
 	transition: all .2s ease-in-out;
 }
 
-#page-menu nav li a:hover,
+#page-menu nav li:hover a,
 #page-menu nav li.current a { background-color: rgba(0,0,0,0.15); }
+
+#page-menu li:hover ul { display: block; }
+
+#page-menu ul ul {
+	display: none;
+	position: absolute;
+	width: 150px;
+	top: 44px;
+	left: 0;
+	z-index: 99;
+	height: auto;
+	background-color: #1ABC9C;
+}
+
+#page-menu ul ul ul { display: none !important; } /* Disable Multi-Level Links */
+
+#page-menu ul ul li { float: none; }
+
+#page-menu ul ul a {
+	height: auto;
+	line-height: 22px;
+	margin: 0;
+	padding: 8px 14px;
+	border-radius: 0;
+	background-color: rgba(0,0,0,0.15);
+}
+
+#page-menu ul ul li:hover a,
+#page-menu ul ul li.current a { background-color: rgba(0,0,0,0.3); }
 
 
 /* Page Menu - Dots Style

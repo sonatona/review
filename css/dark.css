@@ -20,10 +20,20 @@ body.dark,
 .dark .portfolio-ajax-modal,
 .dark .modal-content,
 .dark .css3-spinner,
-body.side-push-panel.dark #side-panel,
-body.side-push-panel #side-panel.dark { background-color: #383838; }
+body.dark #side-panel,
+body #side-panel.dark { background-color: #383838; }
 
-.dark .css3-spinner > div { background-color: rgba(255,255,255,0.35); }
+.dark .css3-spinner > div,
+.dark .css3-spinner-grid-pulse > div,
+.dark .css3-spinner-ball-rotate > div,
+.dark .css3-spinner-zig-zag > div,
+.dark .css3-spinner-ball-scale-multiple > div,
+.dark .css3-spinner-triangle-path > div,
+.dark .css3-spinner-ball-pulse-sync > div { background-color: rgba(255,255,255,0.35); }
+
+
+.dark .css3-spinner-clip-rotate > div,
+.dark .css3-spinner-scale-ripple > div { border-color: rgba(255,255,255,0.35); }
 
 .dark .line,
 .dark .double-line { border-top-color: rgba(255,255,255,0.1); }
@@ -1039,11 +1049,11 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark .footer-widgets-wrap a:hover { color: #999; }
 
 .dark .sidebar-widgets-wrap .widget,
-body.side-push-panel.dark #side-panel .widget,
-body.side-push-panel #side-panel.dark .widget { border-top-color: rgba(255,255,255,0.1); }
+body.dark #side-panel .widget,
+body #side-panel.dark .widget { border-top-color: rgba(255,255,255,0.1); }
 
-body.side-push-panel.dark #side-panel #side-panel-trigger-close a,
-body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
+body.dark #side-panel #side-panel-trigger-close a,
+body #side-panel.dark #side-panel-trigger-close a {
 	background-color: rgba(0,0,0,0.2);
 	color: #FFF;
 }
@@ -1091,6 +1101,13 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 
 
 .dark .nav-tree li a { color: #BBB; }
+
+
+.dark #cookie-notification,
+#cookie-notification.dark {
+	background-color: rgba(0,0,0,0.85);
+	color: #EEE;
+}
 
 
 /* Dark Scheme - Bootstrap

@@ -7,6 +7,12 @@
 
 .uppercase { text-transform: uppercase !important; }
 
+.lowercase { text-transform: lowercase !important; }
+
+.capitalize { text-transform: capitalize !important; }
+
+.nott { text-transform: none !important; }
+
 .tright { text-align: right !important; }
 
 .tleft { text-align: left !important; }
